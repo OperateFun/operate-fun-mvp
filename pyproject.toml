@@ -1,7 +1,7 @@
 [project]
-name = "surf-new"
+name = "operate-fun"
 version = "0.1.0"
-description = "Surf new"
+description = "Operate Fun MVP"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

@@ -30,10 +30,10 @@ const ibmPlexMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Surf.new - built with Steel",
-  description: "Surf.new - web agent demos built on top of Steel",
+  title: "Operate Fun",
+  description: "Operate Fun - Operators For Everyone",
   icons: {
-    icon: "/logo.svg",
+    icon: "/logo-white.svg",
   },
 };
 
