@@ -118,6 +118,9 @@ const ChatInputContainer = React.memo(
       (e: React.FormEvent, messageText: string, attachments: File[]) => {
         e.preventDefault();
 
+        console.info("[INPUT] Submitting message:");
+        console.info(e);
+
         // Only send message if there's actual content
         if (messageText && messageText.trim()) {
           console.info(
@@ -337,7 +340,7 @@ const MemoizedMessageList = React.memo(
                               <div className="font-normal text-[--gray-12]">
                                 <MarkdownText content={displayReason} />
                                 {!showButtons && (
-                                  <div className="mt-2 text-sm text-[--gray-10] italic">
+                                  <div className="mt-2 text-sm italic text-[--gray-10]">
                                     {isPaused
                                       ? "(Confirmation no longer needed)"
                                       : "(Action has been taken)"}
@@ -505,6 +508,7 @@ function useChatState({
       console.log("[CHAT] Chat finished message:", message.id);
     },
     onError: error => {
+      console.error(chatBodyConfig);
       console.error("[CHAT] Chat error:", error);
       toast({
         title: "Error",
@@ -690,10 +694,8 @@ const ChatPageContent = React.memo(
 
           {/* Right (browser) - Keep more prominent */}
           <div
-            className="
-              h-[60vh] 
-              flex-1 border-b
-            h-[60vh] 
+            className=" 
+              h-[60vh]
             flex-1 border-b
             border-[--gray-3] p-4 md:h-full 
             md:border-b-0
