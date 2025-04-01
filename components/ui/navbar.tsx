@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+import { SettingsButton } from "@/components/ui/SettingsDrawer";
+
 import { cn } from "@/lib/utils";
 
 import Logo from "@/public/logo-white.svg";
@@ -67,6 +69,7 @@ export function NavBar() {
 
           {/* Right Side */}
           <div className="hidden items-center gap-2.5 md:flex">
+            <SettingsButton />
             <Button
               variant="outline"
               size="sm"

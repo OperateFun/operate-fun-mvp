@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { AuthModal } from "@/components/ui/AuthModal";
+import { Banner } from "@/components/ui/banner";
 import { ChatInput } from "@/components/ui/ChatInput";
 
 import { useToast } from "@/hooks/use-toast";
@@ -138,26 +139,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex h-screen flex-col items-center justify-center">
-      <div className="flex w-full flex-col gap-6 px-4 md:max-w-[740px]">
-        <div className="p-4 text-justify font-geist text-base font-medium leading-tight text-[--gray-12]">
-          Surf.new® is a a playground to test out different web agents. These agents can surf the
-          web and interact with webpages similar to how a human would. <br className="lg:hidden" />{" "}
-          Built by{" "}
-          <Link href="https://steel.dev" className="text-[--yellow-11]">
-            <Image
-              src="/steel_logo.svg"
-              alt="Steel logo"
-              width={18}
-              height={18}
-              className="mr-1 inline-block"
-            />
-            steel.dev
-          </Link>
-          .
-        </div>
+    <main className="flex h-screen flex-col items-center justify-start">
+      <div className="flex w-full flex-col px-4 md:max-w-[740px]">
+        <Banner />
         <div className="flex w-full flex-col gap-2 px-4 md:max-w-[740px]">
-          <div className="flex-col items-start justify-start">
+          {/* <div className="flex-col items-start justify-start">
             <div className="h-24 self-stretch overflow-hidden rounded-t-[20px] border border-[--gray-3]">
               <div className="relative h-32 px-6 pb-2 pt-8">
                 <Image
@@ -179,7 +165,7 @@ export default function Home() {
                 placeholder="What is on your mind?"
               />
             </div>
-          </div>
+          </div> */}
           {/* Starter Buttons */}
           <div className="mt-4 flex gap-4 overflow-x-auto pb-4 md:flex-col md:overflow-x-visible md:pb-0">
             {starterButtons.map((button, index) => (
