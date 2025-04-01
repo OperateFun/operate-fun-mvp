@@ -603,10 +603,10 @@ function SettingsContent({ closeSettings }: { closeSettings: () => void }) {
                       Ollama is a self-hosted solution that requires running the app locally.
                     </p>
                     <p className="mb-2 text-sm text-[--gray-11]">
-                      1. Clone and run surf.new locally first:
+                      1. Clone and run Operate.Fun locally first:
                       <code className="mt-1 block rounded bg-[--gray-4] p-1 text-xs">
-                        git clone https://github.com/steel-dev/surf.new cd surf.new npm install npm
-                        run dev
+                        git clone https://github.com/OperateFun/operate-fun-mvp cd operate-fun-mvp
+                        npm install npm run dev
                       </code>
                     </p>
                     <p className="mb-2 text-sm text-[--gray-11]">
@@ -650,7 +650,7 @@ function SettingsContent({ closeSettings }: { closeSettings: () => void }) {
                       </code>
                     </p>
                     <p className="text-sm text-[--gray-11]">
-                      3. Surf.new will connect to your local Ollama instance automatically
+                      3. Operate.Fun will connect to your local Ollama instance automatically
                     </p>
                   </>
                 )}
