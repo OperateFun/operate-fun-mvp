@@ -1,0 +1,15 @@
+# Python-related directories
+
+api/
+**pycache**/
+_.py
+_.pyc
+requirements.txt
+venv/
+.venv/
+.uv/
+
+# Other non-frontend files
+
+README.md
+LICENSE
