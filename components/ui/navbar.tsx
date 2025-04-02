@@ -29,7 +29,7 @@ export function NavBar() {
     resetSession();
 
     // Navigate to home page
-    router.push("/");
+    router.push("/chat");
   };
 
   return (

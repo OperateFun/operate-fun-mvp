@@ -39,37 +39,17 @@ import { useAgents } from "@/app/hooks/useAgents";
 import { useOllamaModels } from "@/app/hooks/useOllamaModels";
 
 export function SettingsButton() {
-  const { currentSettings } = useSettings();
   const [showSettings, setShowSettings] = useState(false);
 
   return (
     <Sheet open={showSettings} onOpenChange={setShowSettings}>
       <SheetTrigger asChild>
         <Button
-          className={[
-            "inline-flex items-center justify-center overflow-hidden gap-1.5",
-            "h-8 pl-0 pr-2.5 rounded-full border text-sm font-normal leading-[14px]",
-            "font-geist",
-            "bg-[--gray-2] border-[--gray-3] text-[--gray-12]",
-            "hover:bg-[--gray-3]",
-            "disabled:text-[--gray-8]",
-            "",
-          ].join(" ")}
+          variant="outline"
+          size="sm"
+          className="hidden h-8 rounded-full border-[--gray-3] bg-[--gray-1] text-[--gray-11] md:flex"
         >
-          <div
-            className={[
-              "w-8 h-8 flex items-center justify-center gap-2.5 border-r text-sm",
-              "bg-transparent",
-              "border-[--gray-3]",
-              "font-geist",
-              "group-hover:bg-transparent",
-            ].join(" ")}
-          >
-            <Settings className="size-5" />
-          </div>
-          <div className="max-w-[60px] truncate md:max-w-[100px] lg:max-w-[160px]">
-            {currentSettings?.selectedAgent}
-          </div>
+          <Settings className="size-5" />
         </Button>
       </SheetTrigger>
       <SettingsContent closeSettings={() => setShowSettings(false)} />
